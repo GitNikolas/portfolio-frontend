@@ -1,0 +1,23 @@
+.techs__subtitle{
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 58px;
+  letter-spacing: -2px;
+  margin: 90px 0 26px;
+}
+
+@media screen and (max-width:768px) {
+  .techs__subtitle{
+    margin: 80px 0 23px;
+  }
+}
+
+@media screen and (max-width:320px) {
+  .techs__subtitle{
+    margin: 60px 0 23px;
+    font-size: 30px;
+    line-height: normal;
+    letter-spacing: -1.2px;
+  }
+}

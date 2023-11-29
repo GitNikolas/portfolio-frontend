@@ -1,0 +1,19 @@
+.aboutProject__table-subtitle{
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  margin: 0;
+}
+
+@media screen and (max-width:320px) {
+  .aboutProject__table-subtitle{
+    font-size: 11px;
+    line-height: 16px;
+    margin: 0 0 56px;
+  }
+
+  .aboutProject__table-subtitle:last-child{
+    margin: 0;
+  }
+}

@@ -1,0 +1,139 @@
+.register{
+  display: flex;
+  flex-direction: column;
+  margin: -4px 0 0;
+  padding: 0 0 70px;
+}
+
+.register__title{
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin: 40px 0 40px;
+}
+
+.register__form{
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto 16px;
+  width: 30.9375%;
+  border: none;
+  padding: 0;
+}
+
+.register__field{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0 0 9px;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.register__field:last-of-type{
+  margin: 0 0 100px;
+}
+
+.register__caption{
+  margin: 0;
+  color: #8B8B8B;
+  font-size: 10px;
+}
+
+.register__caption:last-child{
+  color: #8B8B8B;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.register__input{
+  color: #FFF;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(66, 66, 66, 1);
+  padding: 0 0 9px;
+}
+
+.register__input:focus{
+  outline: none;
+  border-bottom: 1px solid rgba(66, 133, 244, 1);
+}
+
+.register__input[type='password']{
+  color: #EE3465;
+  font-size: 14px;
+}
+
+.register__input-error{
+  color: transparent;
+  font-size: 10px;
+  color: #EE3465;
+  min-height: 12px;
+}
+
+.register__login-link{
+  margin: 0 0 0 6px;
+  color: rgba(66, 133, 244, 1);
+  text-decoration: none;
+}
+
+.register__error{
+  color: transparent;
+  text-align: center;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0 0 20px;
+  min-height: 14px;
+  color: #FF004C;
+}
+
+@media screen and (max-width:768px) {
+  .register{
+    padding: 160px 0 269px;
+  }
+  .register__form{
+    width: 396px;
+  }
+
+  .register__field:last-of-type{
+    margin: 0 0 100px;
+  }
+}
+
+@media screen and (max-width:410px) {
+  .register{
+    padding: 0 0 40px;
+    margin: -18px 0 0;
+  }
+
+  .register__title{
+    margin: 50px 0 80px;
+  }
+
+  .register__form{
+    max-width: 260px;
+    align-items: center;
+    margin: 0 auto 315px;
+  }
+
+  .register__field{
+    width: 100%;
+  }
+
+  .register__field:last-of-type{
+    margin: 0 0 187px;
+  }
+}

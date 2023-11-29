@@ -1,0 +1,16 @@
+.aboutProject__table-title{
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.8px;
+  margin: 0;
+}
+
+@media screen and (max-width:320px) {
+  .aboutProject__table-title{
+    font-size: 18px;
+    letter-spacing: -0.72px;
+    margin: 0 0 18px;
+  }
+}

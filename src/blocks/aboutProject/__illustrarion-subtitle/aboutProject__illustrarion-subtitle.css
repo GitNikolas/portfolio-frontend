@@ -1,0 +1,18 @@
+.aboutProject__illustrarion-subtitle{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgba(139, 139, 139, 1);
+  margin:10px 0 0;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 17px;
+}
+
+@media screen and (max-width:320px) {
+  .aboutProject__illustrarion-subtitle{
+    font-size: 11px;
+    margin: 0;
+  }
+}

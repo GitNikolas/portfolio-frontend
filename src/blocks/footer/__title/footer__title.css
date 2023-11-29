@@ -1,0 +1,19 @@
+.footer__title{
+  color: rgba(66, 66, 66, 1);
+  border-bottom: 1px solid rgba(66, 66, 66, 1);
+  padding: 0 0 18px;
+  margin: 0 0 20px;
+  text-align: center;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+@media screen and (max-width:320px) {
+  .footer__title {
+    font-size: 12px;
+    margin: 0 0 30px;
+    padding: 0 0 21px;
+  }
+}

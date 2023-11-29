@@ -1,0 +1,19 @@
+.techs{
+  padding: 100px 70px;
+  background-color: rgba(39, 39, 39, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media screen and (max-width:768px) {
+  .techs{
+    padding: 87px 50px 90px;
+  }
+}
+
+@media screen and (max-width:320px) {
+  .techs{
+    padding: 60px 18px 70px;
+  }
+}

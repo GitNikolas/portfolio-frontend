@@ -1,0 +1,22 @@
+.promo__landing-logo{
+  align-self: flex-end;
+  background-image: url('../../../images/text__COLOR_landing-logo.svg');
+  background-size: cover;
+  width: 722px;
+  height: 244px;
+}
+
+@media screen and (max-width:768px) {
+  .promo__landing-logo{
+    width: 680px;
+    height: 230px;
+  }
+}
+
+@media screen and (max-width:320px) {
+  .promo__landing-logo{
+    width: 320px;
+    height: 230px;
+    background-position: center;
+  }
+}

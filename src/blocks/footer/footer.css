@@ -1,0 +1,20 @@
+.footer {
+  flex-shrink: 0;
+  padding: 79px 70px 20px;
+}
+
+.footer_display_none{
+  display: none;
+}
+
+@media screen and (max-width:768px) {
+  .footer {
+    padding: 79px 30px 20px;
+  }
+}
+
+@media screen and (max-width:320px) {
+  .footer {
+    padding: 65px 10px 20px;
+  }
+}

@@ -1,0 +1,29 @@
+.techs__list-item{
+  display: flex;
+  flex-wrap: wrap;
+  width: 90px;
+  height: 60px;
+  background-color: rgba(48, 48, 48, 1);
+  border-radius: 10px;
+  justify-content: center;
+  align-content: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.56px;
+}
+
+@media screen and (max-width:768px) {
+  .techs__list-item{
+    width: 84px;
+    height: 57px;
+  }
+}
+
+@media screen and (max-width:320px) {
+  .techs__list-item{
+    font-size: 12px;
+    letter-spacing: -0.48px;
+  }
+}

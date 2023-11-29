@@ -1,0 +1,17 @@
+.header__link_type_signin{
+  width:76px;
+  height:32px;
+  margin-left: 30px;
+  border-radius: 3px;
+  background-color: rgba(61, 220, 132, 1);
+  color: black;
+}
+
+@media screen and (max-width:320px) {
+  .header__link_type_signin{
+    width: 54px;
+    height: 26px;
+    margin-left: 14px;
+    font-size: 10px;
+  }
+}

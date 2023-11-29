@@ -1,0 +1,16 @@
+.search-button{
+  width: 58.6px;
+  height: 34px;
+  background-color: rgba(66, 133, 244, 1);
+  border: none;
+  border-radius: 48px;
+  color: #FFF;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 18px;
+  cursor: pointer;
+}
+
+.search-button:hover{
+  opacity: .8;
+}

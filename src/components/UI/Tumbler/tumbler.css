@@ -1,0 +1,38 @@
+.invisible-tumbler{
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  clip-path: inset(0 0 0 0);
+}
+
+.visible-tumbler{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 20px;
+  width: 36px;
+  border-radius: 20px;
+  background-color: rgba(52, 52, 52, 1);
+  cursor: pointer;
+}
+
+.visible-tumbler::before{
+  content: '';
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 1);
+  width: 15px;
+  height: 15px;
+  background-color: rgba(160, 160, 160, 1);
+  margin: 0 2px 0;
+  transition: all .4s;
+}
+
+.invisible-tumbler:checked + .visible-tumbler::before{
+  transform: translateX(15px);
+  background-color: rgba(43, 224, 128, 1);
+}
+
+.invisible-tumbler:focus + .visible-tumbler{
+  box-shadow: 0 0 2px rgba(43, 224, 128, 1);
+}

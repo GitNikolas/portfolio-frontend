@@ -1,0 +1,39 @@
+.movies {
+  box-sizing: border-box;
+  padding: 70px 0 0;
+}
+
+.movies__not-found-title {
+  width: 100%;
+  text-align: center;
+}
+
+.movies__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 80px 0 80px;
+  margin: 0 70px 0;
+  border-top: 1px solid rgba(66, 66, 66, 1);
+}
+
+@media screen and (max-width:768px) {
+  .movies {
+    padding: 80px 0 0;
+  }
+
+  .movies__content {
+    margin: 0 30px 0;
+  }
+}
+
+@media screen and (max-width:450px) {
+  .movies {
+    padding: 80px 0 80px;
+  }
+
+  .movies__content {
+    padding: 50px 0 0;
+    margin: 0 10px 0;
+  }
+}

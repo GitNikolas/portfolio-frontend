@@ -1,0 +1,13 @@
+.techs__list{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+@media screen and (max-width:320px) {
+  .techs__list{
+    justify-content: flex-start;
+    padding-left: 51px;
+  }
+}

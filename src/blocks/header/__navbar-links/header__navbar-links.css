@@ -1,0 +1,13 @@
+.header__navbar-links{
+  display: flex;
+  flex-direction: row;
+  margin-left:45px;
+  gap:16px;
+  text-decoration: none;
+}
+
+@media screen and (max-width:768px) {
+  .header__navbar-links{
+    display: none;
+  }
+}

@@ -1,0 +1,19 @@
+.footer__menu{
+  display: flex;
+  flex-direction: row;
+  gap:10px;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+@media screen and (max-width:320px) {
+  .footer__menu {
+    flex-direction: column;
+    gap:30px;
+
+  }
+}
