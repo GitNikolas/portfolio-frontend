@@ -1,5 +1,4 @@
-import React, { useCallback, useContext, useEffect } from "react";
-import { CurrentUserContext } from '../../contexts/CurrentUserContext';
+import React, { useCallback, useEffect } from "react";
 import validator from 'validator';
 
 //хук управления формой

@@ -1,5 +1,5 @@
 import { React, useEffect, useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import './movies__card-list.css'
 import MoviesCard from '../MoviesCard/MoviesCard';
 import MoreButton from '../UI/More-button/MoreButton';
@@ -37,7 +37,7 @@ function MoviesCardList({ movieData, savedMovieData, setMovieData }) {
     try{
       let response = await deleteFilm(cardId);
       if(response.ok){
-        setMovieData((state) => state.filter(item => item.movieId !== cardId));
+        setMovieData((state) => state.filter(item => item.id !== cardId));
       }
       else {
         throw new Error('Произошла ошибка, попробуйте выполнить запрос позже')

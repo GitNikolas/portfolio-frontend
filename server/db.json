@@ -1,0 +1,33 @@
+{
+  "movies": [],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "users": [
+    {
+      "email": "email@email.ru",
+      "password": "$2a$10$gZ0KaoEpGOQShn.4cPx.Ru5C4rKGOolZkeefsFLIncOcCqqcajaIy",
+      "name": "name1",
+      "id": 1
+    },
+    {
+      "email": "email2@email.ru",
+      "password": "$2a$10$dcuNjnV3mwGxjGRrxtQ8Uuka8rxGIE6QEkT2RfMKgR4O03AJq9cgG",
+      "name": "stone",
+      "id": 2
+    },
+    {
+      "email": "email3@email.ru",
+      "password": "$2a$10$ISFO.2JjquR.znql8n/5i.Ue2h7ilhxPxkTTuPTOFSkjfwsjIwDnO",
+      "name": "name",
+      "id": 3
+    }
+  ]
+}

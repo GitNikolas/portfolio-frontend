@@ -57,7 +57,7 @@ export function useSearchForm () {
   async function getSavedFilms() {
     let films = await getUserFilms();
     if(films) {
-      setSavedFilmsId(films.map(item => item.movieId));
+      setSavedFilmsId(films.map(item => item.movieNumber));
     }
   }
 

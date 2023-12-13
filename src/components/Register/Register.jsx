@@ -1,5 +1,5 @@
 import { React, useState, useEffect } from 'react';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './register.css';
 import SubmitButton from '../UI/Submit-button/SubmitButton';
 import { useFormWithValidation } from '../UseForm/UseForm';

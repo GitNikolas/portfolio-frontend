@@ -1,4 +1,4 @@
-import { React, useState } from 'react';
+import React from 'react';
 import './burger-button.css';
 
 function BurgerButton({ openMenu, onClick }) {

@@ -15,21 +15,9 @@ function Profile({ logout }) {
 
   const [ isLoading, setIsLoading ] = useState(false);
 
-  async function handleSignOut(event) {
-    try {
-      event.preventDefault();
-      const response = await signOut();
-      if(response.ok) {
-        logout();
-        localStorage.clear();
-      }
-      else {
-        throw new Error (response);
-      }
-    }
-    catch(err) {
-      console.error(err.message);
-    }
+  function handleSignOut(event) {
+    event.preventDefault();
+    logout();
   }
 
   function handleProfileEdit() {

@@ -1,5 +1,4 @@
 import { React, useEffect, useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
 import '../Movies/movies.css';
 import SearchForm from '../SearchForm/SearchForm';
 import MoviesCardList from '../MoviesCardList/MoviesCardList';
@@ -17,7 +16,7 @@ function SavedMovies() {
 
   const [ filmsNotFound, setFilmsNotFound ] = useState(false);
 
-  const { values, setValues, isChecked, setIsChecked, handleChange } = useForm();
+  const { values, isChecked, setIsChecked, handleChange } = useForm();
 
   async function getMovies() {
     try{

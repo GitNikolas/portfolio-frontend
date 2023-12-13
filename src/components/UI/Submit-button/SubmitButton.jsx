@@ -1,4 +1,4 @@
-import { React, useState } from 'react';
+import React from 'react';
 import './submit-button.css';
 
 function SubmitButton({ children, ...props}) {

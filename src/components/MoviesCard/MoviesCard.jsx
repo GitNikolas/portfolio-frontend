@@ -11,25 +11,24 @@ function MoviesCard({ data, savedMovieData, handleCardDelete }) {
   let location = useLocation();
 
   function toggleLike() {
+    const ownerId = localStorage.getItem('ownerId');
+    const id = Number(ownerId + data.id)
     if(isLiked) {
       setIsLiked(!isLiked);
-      return deleteFilm(data.id);
+      return deleteFilm(id);
     }
     setIsLiked(!isLiked);
     return postFilm(data);
   }
 
   function handleDeleteFilm() {
-    if(data.id){
-      return handleCardDelete(data.id)
-    }
-    else{
-      return handleCardDelete(data.movieId)
-    }
+    return handleCardDelete(data.id);
   }
 
   function checkIsLiked() {
-    let check = savedMovieData.some(item => item === data.id);
+    let check = savedMovieData.some((item) => {
+      return item === data.id
+    });
     setIsLiked(check);
   }
 

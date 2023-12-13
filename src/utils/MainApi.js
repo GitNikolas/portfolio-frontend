@@ -1,14 +1,16 @@
-const baseUrl = 'https://api.movies-explorer.pna.nomoredomainsrocks.ru';
+// const baseUrl = 'https://api.movies-explorer.pna.nomoredomainsrocks.ru';
+const baseUrl = 'http://localhost:8080';
 
 export async function register({ name, email, password }) {
   try{
-    let response = await fetch(`${baseUrl}/signup`, {
+    let response = await fetch(`${baseUrl}/register`, {
       method:'POST',
       headers: {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({ name, email, password })
     });
+    console.log(response);
     if(response.status === 409) {
       throw new Error('Пользователь с таким email уже существует');
     }
@@ -24,9 +26,8 @@ export async function register({ name, email, password }) {
 
 export async function login({ email, password }) {
   try{
-    let response = await fetch(`${baseUrl}/signin`, {
+    let response = await fetch(`${baseUrl}/login`, {
       method:'POST',
-      credentials: 'include',
       headers: {
         'Content-Type': 'application/json'
       },
@@ -38,6 +39,9 @@ export async function login({ email, password }) {
     else if (!response.ok){
       throw new Error('Произошла ошибка, проверьте корректность введённых данных');
     }
+    let res = await response.json();
+    localStorage.setItem('JWT', `${res.accessToken}`);
+    localStorage.setItem('ownerId', `${res.user.id}`);
     return response;
   } catch(err) {
     console.error(err);
@@ -47,9 +51,13 @@ export async function login({ email, password }) {
 
 export async function getUser() {
   try{
-    let response = await fetch(`${baseUrl}/users/me`, {
+    let token = localStorage.getItem('JWT');
+    let ownerId = localStorage.getItem('ownerId');
+    let response = await fetch(`${baseUrl}/users/${ownerId}`, {
       method:'GET',
-      credentials: 'include',
+      headers: {
+        Authorization: `Bearer ${token}`
+      }
     });
     if(!response.ok){
       throw new Error('Необходима авторизация');
@@ -63,11 +71,13 @@ export async function getUser() {
 
 export async function patchUser({ name, email }) {
   try{
-    let response = await fetch(`${baseUrl}/users/me`, {
+    let token = localStorage.getItem('JWT');
+    let ownerId = localStorage.getItem('ownerId');
+    let response = await fetch(`${baseUrl}/users/${ownerId}`, {
       method:'PATCH',
-      credentials: 'include',
       headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${token}`
       },
       body: JSON.stringify({ name, email }),
     });
@@ -82,28 +92,12 @@ export async function patchUser({ name, email }) {
   }
 }
 
-export async function signOut() {
-  try{
-    let response = await fetch(`${baseUrl}/signout`, {
-      method:'POST',
-      credentials: 'include',
-    });
-    if(!response.ok) {
-      throw new Error('Необходима авторизация');
-    }
-    return response;
-  } catch(err) {
-    console.error(err);
-    return err;
-  }
-}
-
 export async function postFilm({ country, director, duration, year, description,
   image, trailerLink, id, nameRU, nameEN, }) {
   try{
+    let ownerId = localStorage.getItem('ownerId');
     let response = await fetch(`${baseUrl}/movies`, {
       method:'POST',
-      credentials: 'include',
       headers: {
         'Content-Type': 'application/json'
       },
@@ -111,8 +105,11 @@ export async function postFilm({ country, director, duration, year, description,
         image: `https://api.nomoreparties.co/${image.url}`,
         thumbnail: `https://api.nomoreparties.co/${image.formats.thumbnail.url}`,
         trailerLink,
-        movieId: id,
-        nameRU, nameEN, })
+        movieNumber: id,
+        nameRU, nameEN,
+        userId: ownerId,
+        id: Number(ownerId + id)
+      })
     });
      if (!response.ok){
       throw new Error('Произошла ошибка, проверьте корректность введённых данных');
@@ -126,14 +123,15 @@ export async function postFilm({ country, director, duration, year, description,
 
 export async function getUserFilms() {
   try{
-    let response = await fetch(`${baseUrl}/movies`, {
-      method:'GET',
-      credentials: 'include',
+    let ownerId = localStorage.getItem('ownerId');
+    let response = await fetch(`${baseUrl}/movies?userId=${ownerId}`, {
+      method:'GET'
     });
     if(!response.ok){
       throw new Error('Необходима авторизация');
     };
-    return response.json();
+    let filmList = await response.json();
+    return filmList;
   } catch(err) {
     console.error(err);
     return err.message;
@@ -144,7 +142,9 @@ export async function deleteFilm(movieId) {
   try{
     let response = await fetch(`${baseUrl}/movies/${movieId}`, {
       method:'DELETE',
-      credentials: 'include',
+      headers: {
+        'Content-Type': 'application/json'
+      }
     });
     return response;
   } catch(err) {

@@ -1,10 +1,10 @@
-import { React, useState, useEffect, useCallback } from "react";
+import { React, useState, useEffect } from "react";
 import { getUser } from '../../utils/MainApi';
 import { useNavigate } from 'react-router-dom';
 
 export function useAuthorization() {
   const [isAuthorized, setisAuthorized] = useState(false);
-  const [ dataIsReady, setdataIsReady ] = useState(false);
+  const [dataIsReady, setdataIsReady] = useState(false);
   const [currentUser, setCurrentUser] = useState(null);
   const navigate = useNavigate();
 
