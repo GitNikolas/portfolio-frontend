@@ -1,29 +1,29 @@
 {
   "files": {
-    "main.css": "/portfolio-frontend/static/css/main.a662f4c5.css",
-    "main.js": "/portfolio-frontend/static/js/main.e1a7ce16.js",
-    "static/media/IMG_20230907_095722.jpg": "/portfolio-frontend/static/media/IMG_20230907_095722.bacbbaeda2ef477d323e.jpg",
-    "static/media/Inter-Medium.woff": "/portfolio-frontend/static/media/Inter-Medium.9053572c46aeb4b16caa.woff",
-    "static/media/Inter-Black.woff": "/portfolio-frontend/static/media/Inter-Black.c6938660eec019fefd68.woff",
-    "static/media/Inter-Regular.woff": "/portfolio-frontend/static/media/Inter-Regular.8c206db99195777c6769.woff",
-    "static/media/Inter-Medium.woff2": "/portfolio-frontend/static/media/Inter-Medium.293fd13dbca5a3e450ef.woff2",
-    "static/media/Inter-Black.woff2": "/portfolio-frontend/static/media/Inter-Black.15ca31c0a2a68f76d2d1.woff2",
-    "static/media/Inter-Regular.woff2": "/portfolio-frontend/static/media/Inter-Regular.c8ba52b05a9ef10f4758.woff2",
-    "static/media/text__COLOR_landing-logo.svg": "/portfolio-frontend/static/media/text__COLOR_landing-logo.4a7e65f596a0d095848c.svg",
-    "static/media/logo.svg": "/portfolio-frontend/static/media/logo.29aee1786bd40ae12ca3.svg",
-    "index.html": "/portfolio-frontend/index.html",
-    "static/media/loupe.svg": "/portfolio-frontend/static/media/loupe.490ff33c53f97e0d6f99.svg",
-    "static/media/profile.svg": "/portfolio-frontend/static/media/profile.46c3baad9a46b437ff9f.svg",
-    "static/media/icon__COLOR_icon-main.svg": "/portfolio-frontend/static/media/icon__COLOR_icon-main.bf327a171114925a6ee2.svg",
-    "static/media/icon__like.svg": "/portfolio-frontend/static/media/icon__like.b152db3a5c9efa8190d1.svg",
-    "static/media/Group.svg": "/portfolio-frontend/static/media/Group.852c48dce74ff1ed2f6c.svg",
-    "static/media/icon__cross.svg": "/portfolio-frontend/static/media/icon__cross.8355f4188e86f4a57526.svg",
-    "static/media/icon__like_active.svg": "/portfolio-frontend/static/media/icon__like_active.a038729e835200799570.svg",
-    "main.a662f4c5.css.map": "/portfolio-frontend/static/css/main.a662f4c5.css.map",
-    "main.e1a7ce16.js.map": "/portfolio-frontend/static/js/main.e1a7ce16.js.map"
+    "main.css": "/static/css/main.626bc738.css",
+    "main.js": "/static/js/main.d698a7dc.js",
+    "static/media/IMG_20230907_095722.jpg": "/static/media/IMG_20230907_095722.bacbbaeda2ef477d323e.jpg",
+    "static/media/Inter-Medium.woff": "/static/media/Inter-Medium.9053572c46aeb4b16caa.woff",
+    "static/media/Inter-Black.woff": "/static/media/Inter-Black.c6938660eec019fefd68.woff",
+    "static/media/Inter-Regular.woff": "/static/media/Inter-Regular.8c206db99195777c6769.woff",
+    "static/media/Inter-Medium.woff2": "/static/media/Inter-Medium.293fd13dbca5a3e450ef.woff2",
+    "static/media/Inter-Black.woff2": "/static/media/Inter-Black.15ca31c0a2a68f76d2d1.woff2",
+    "static/media/Inter-Regular.woff2": "/static/media/Inter-Regular.c8ba52b05a9ef10f4758.woff2",
+    "static/media/text__COLOR_landing-logo.svg": "/static/media/text__COLOR_landing-logo.4a7e65f596a0d095848c.svg",
+    "static/media/logo.svg": "/static/media/logo.29aee1786bd40ae12ca3.svg",
+    "static/media/loupe.svg": "/static/media/loupe.490ff33c53f97e0d6f99.svg",
+    "index.html": "/index.html",
+    "static/media/profile.svg": "/static/media/profile.46c3baad9a46b437ff9f.svg",
+    "static/media/icon__COLOR_icon-main.svg": "/static/media/icon__COLOR_icon-main.bf327a171114925a6ee2.svg",
+    "static/media/icon__like.svg": "/static/media/icon__like.b152db3a5c9efa8190d1.svg",
+    "static/media/Group.svg": "/static/media/Group.852c48dce74ff1ed2f6c.svg",
+    "static/media/icon__cross.svg": "/static/media/icon__cross.8355f4188e86f4a57526.svg",
+    "static/media/icon__like_active.svg": "/static/media/icon__like_active.a038729e835200799570.svg",
+    "main.626bc738.css.map": "/static/css/main.626bc738.css.map",
+    "main.d698a7dc.js.map": "/static/js/main.d698a7dc.js.map"
   },
   "entrypoints": [
-    "static/css/main.a662f4c5.css",
-    "static/js/main.e1a7ce16.js"
+    "static/css/main.626bc738.css",
+    "static/js/main.d698a7dc.js"
   ]
 }
