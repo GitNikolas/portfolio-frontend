@@ -18,12 +18,12 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "dev": "react-scripts start",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "server": "json-server-auth ./server/db.json -r ./server/routes.json --port 8080",
-    "start": "concurrently \"npm run dev\" \"npm run server\"",
+    "dev": "concurrently \"npm run start\" \"npm run server\"",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
